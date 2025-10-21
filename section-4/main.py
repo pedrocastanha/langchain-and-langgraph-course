@@ -10,13 +10,12 @@ from callbacks import AgentCallbackHandler
 
 load_dotenv()
 
+
 @tool
 def get_text_length(text: str) -> int:
     """Returns the length of a text by characters"""
     print(f"get_text_length enter with {text=}")
-    text = text.strip("'\n").strip(
-        '"'
-    )
+    text = text.strip("'\n").strip('"')
     return len(text)
 
 
